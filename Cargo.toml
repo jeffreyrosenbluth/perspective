@@ -8,3 +8,5 @@ edition = "2021"
 [dependencies]
 wassily = { path = "/Users/jeffreyrosenbluth/Rust/wassily"}
 rand = "0.8.5"
+image = "0.24"
+rand_pcg = "0.3"
