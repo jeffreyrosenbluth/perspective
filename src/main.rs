@@ -43,7 +43,7 @@ impl Default for Model {
             img_index: 58,
             desat: 0.75,
             seed: 1,
-            photo: "/Users/jeffreyrosenbluth/Rust/sketches/perspective/assets/ciff.png",
+            photo: "/Users/jeffreyrosenbluth/Rust/sketches/perspective/assets/balcony.png",
         }
     }
 }
@@ -70,7 +70,7 @@ fn view_fn(canvas: &mut Canvas, model: &Model) {
     let top = pt(canvas.width() / 2, 0);
     let bottom = pt(canvas.width() / 2, canvas.height());
 
-    let quads = perspective_quads(
+    let mut quads = perspective_quads(
         left,
         top,
         bottom,
@@ -94,7 +94,6 @@ fn view_fn(canvas: &mut Canvas, model: &Model) {
         let bbox = bounding_box(&ps, 100.0);
         let w = bbox.width() as u32;
         let h = bbox.height() as u32;
-        // let n: u32 = rng.gen_range(1..5);
         let n = 0;
         match q {
             // Stipple
